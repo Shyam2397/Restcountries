@@ -77,7 +77,7 @@ async function mycountries(){
             let Cwt = await feWeather(e.latlng)
             // console.log(Cwt)
             let Temp = document.createElement('h6')
-            Temp.setAttribute('id','lag')
+            Temp.setAttribute('id','Cwet')
             Temp.innerHTML= `Temp : ${Cwt.main.temp} ℃ <br>
             Humidity : ${Cwt.main.humidity} %rh <br>
             Wind Speed : ${Cwt.wind.speed} K/hr <br>

@@ -24,6 +24,8 @@ body{
     background-color: lightgray;
     margin: 20px auto 10px auto;
     padding: 15px;
+    width: 450px;
+    
 }
 #Chead{
     text-align: center;
@@ -41,6 +43,7 @@ body{
     margin-top: 20px;
 }
 #Cap{
+    margin-top: 20px;
     text-align: center;
 }
 #reg{
@@ -51,4 +54,14 @@ body{
 }
 #lag{
     text-align: center;
+}
+#Wbtn{
+    margin-top: 20px;
+    background-color: whitesmoke;
+    padding: 5px;
+    font-size: large;
+}
+#Cwet{
+    text-align: center;
+    margin-top: 20px;
 }
