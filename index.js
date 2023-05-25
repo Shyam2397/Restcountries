@@ -28,16 +28,20 @@ async function mycountries(){
 
     let Totalcard =document.createElement('div')
     Totalcard.setAttribute('id','Tcard')
+    Totalcard.setAttribute('class','row')
     document.getElementById('root').appendChild(Totalcard)
 
     country.forEach((e) => {
         
         let subcard = document.createElement('div')
-        subcard.setAttribute('id','Scard')
+        subcard.setAttribute('id','card')
+        subcard.setAttribute('class','col')
+        subcard.setAttribute('class','col col-lg-4 col-sm-12')
 
 
-        let cardhead = document.createElement('h1')
-        cardhead.setAttribute('id','Chead')
+        let cardhead = document.createElement('div')
+
+        cardhead.setAttribute('id','cardHeader')
         cardhead.innerHTML=e.name.common
         subcard.appendChild(cardhead)
 
@@ -46,37 +50,42 @@ async function mycountries(){
         image.setAttribute('src',e.flags.svg)
         subcard.appendChild(image)
 
-        let capital = document.createElement('h3')
+        let card_Body = document.createElement('div')
+        card_Body.setAttribute('id','cardBody')
+        subcard.appendChild(card_Body)
+
+        let capital = document.createElement('div')
         capital.setAttribute('id','Cap')
         capital.innerHTML= `Capital : `+ e.capital
-        subcard.appendChild(capital)
+        card_Body.appendChild(capital)
 
-        let region = document.createElement('h4')
+        let region = document.createElement('div')
         region.setAttribute('id','reg')
         region.innerHTML= `Region : ` + e.region
-        subcard.appendChild(region)
+        card_Body.appendChild(region)
 
 
-        let concode = document.createElement('h4')
+        let concode = document.createElement('div')
         concode.setAttribute('id','conCode')
         concode.innerHTML= `Country code : ` + e.cca3
-        subcard.appendChild(concode)
+        card_Body.appendChild(concode)
 
 
-        let latlng = document.createElement('h4')
+        let latlng = document.createElement('div')
         latlng.setAttribute('id','lag')
         latlng.innerHTML= `LatLng : ` + e.capitalInfo.latlng
-        subcard.appendChild(latlng)
+        card_Body.appendChild(latlng)
 
 
         let btn = document.createElement('button')
         btn.setAttribute('id','Wbtn')
+        btn.setAttribute('class','btn btn-primary')
         btn.innerHTML = 'Click for Weather'
         btn.addEventListener('click', async ()=>{
             
             let Cwt = await feWeather(e.latlng)
             // console.log(Cwt)
-            let Temp = document.createElement('h6')
+            let Temp = document.createElement('div')
             Temp.setAttribute('id','Cwet')
             Temp.innerHTML= `Temp : ${Cwt.main.temp} ℃ <br>
             Humidity : ${Cwt.main.humidity} %rh <br>

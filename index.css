@@ -4,34 +4,34 @@ body{
     
 }
 
-#head{
-    text-align: center;
+#title{
     margin-top: 10px;
     color: darkblue;
 }
 
-#Tcard{
+/* #Tcard{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
 
-}
+} */
 
-#Scard{
-    display: flex;
-    flex-direction: column;
+#card{
+    /* display: flex; */
+    /* flex-direction: column; */
     background-color: lightgray;
-    margin: 20px auto 10px auto;
-    padding: 15px;
-    width: 450px;
-    
+    margin: 20px 10px;
+    margin-top: 5px;
+    /* padding: 15px; */
+    max-width: 420px    
 }
-#Chead{
+#cardHeader{
     text-align: center;
     padding: 10px;
     background-color: black;
     color: whitesmoke;
+    font-size: xx-large;
 
 }
 #Cimg{
@@ -45,23 +45,29 @@ body{
 #Cap{
     margin-top: 20px;
     text-align: center;
+    font-size: x-large;
 }
 #reg{
     text-align: center;
+    font-size: x-large;
 }
 #conCode{
     text-align: center;
+    font-size: x-large;
 }
 #lag{
     text-align: center;
+    font-size: x-large;
 }
 #Wbtn{
     margin-top: 20px;
-    background-color: whitesmoke;
-    padding: 5px;
+    margin-left: 120px;
+    /* background-color: whitesmoke; */
+    /* padding: 5px; */
     font-size: large;
 }
 #Cwet{
     text-align: center;
     margin-top: 20px;
+    font-size: larger;
 }
